@@ -23,9 +23,9 @@ source("Dropbox/workspace/coursework/act/act_proj/scripts/variables.r")
 data <- read.csv("Dropbox/workspace/coursework/act/act_proj/data/data.csv")
 data$intercept <- 1
 
-include <- c("intercept", social.position)
-# include <- c("duke", include)
-y_data <- data$inculcation_E
+include <- c("intercept", network.composition)
+# include <- c(include, "duke")
+y_data <- data$inculcation_P
 
 # run this for each script
 X_data <- as.matrix(data[,include])
@@ -98,19 +98,26 @@ for(s in 1:kBo) {
     Z[s,] <- z
     SIGMA[s] <- s2
     BETA[s,] <- beta_total
-    # if (s %% kBurn == 0) { print(s) }
+    if (s %% kBurn == 0) { print(s) }
 }
 
 beta.mean <- colMeans(BETA)
 z.mean <- colMeans(Z)
 
-coef.index <- seq(from = 1, by = 2, length.out = kP)
-prob.index <- seq(from = 2, by = 2, length.out = kP)
-to.print <- rep(NA, 2*kP)
+# coef.index <- seq(from = 1, by = 2, length.out = kP)
+# prob.index <- seq(from = 2, by = 2, length.out = kP)
+# to.print <- rep(NA, 2*kP)
 
-to.print[coef.index] <- beta.mean
-to.print[prob.index] <- z.mean
-to.print <- round(to.print, digits=3)
-cat(to.print, sep="\n")
+# to.print[coef.index] <- beta.mean
+# to.print[prob.index] <- z.mean
+# to.print <- round(to.print, digits=3)
+# cat(to.print, sep="\n")
+
+results <- data.frame(matrix(nrow=kP, ncol=0))
+results$beta <- beta.mean
+results$inclusion <- z.mean
+rownames(results) <- include
+results <- t(results)
+print(results)
 
 

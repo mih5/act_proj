@@ -3,9 +3,15 @@ affective dimension: activity
 variable types: network composition
 school included: no
 
-          intercept     marstat     momeduc    dadeduc        momjob
-beta      0.5610324 -0.02320659 0.005080749 0.01969492 -6.025775e-05
-inclusion 1.0000000  0.98250000 0.325500000 0.95325000  6.050000e-02
-               dadjob       ownhome     ownhome2       ownbus
-beta      0.000129188 -0.0004990433 -0.002657014 -0.001269011
-inclusion 0.057500000  0.0570000000  0.091000000  0.070750000
+          intercept     suppnq1     suppnq2     suppnq3     nqfrat      nqrelig
+beta      0.6777028 -0.01281513 0.005076677 -0.03804248 0.01914381 0.0007767917
+inclusion 1.0000000  0.53725000 0.232750000  0.90975000 0.32550000 0.0580000000
+               nqcult     nqserv        nqsgov       nqnews   nqathim
+beta      0.004776457 0.03732725 -0.0007326521 0.0008620665 0.0581796
+inclusion 0.134500000 0.59600000  0.0515000000 0.0622500000 0.7295000
+             nqathcoll      nqsliv     nqcrart      nqathsup        nqacad
+beta      -0.007663668 0.001298509 0.005440921 -0.0001454732 -0.0005817506
+inclusion  0.145250000 0.063000000 0.107000000  0.0590000000  0.0557500000
+               nqrotc
+beta      -0.02332855
+inclusion  0.10125000
