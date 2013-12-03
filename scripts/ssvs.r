@@ -1,6 +1,5 @@
 library(mvtnorm)
 
-source("Dropbox/workspace/ACT/rogers/scripts/variables.r")
 # Reminders for data subsetting
 # demographic: (1) demographic variables
 # social.position: # (2) social position variables
@@ -19,17 +18,18 @@ source("Dropbox/workspace/ACT/rogers/scripts/variables.r")
 # inculcation: each person's inculcation values
 # commonality: each person's commonality values
 
-# load data
-data <- read.csv("Dropbox/workspace/ACT/rogers/data/data.csv")
+# load and set up our data for model building
+source("Dropbox/workspace/coursework/act/act_proj/scripts/variables.r")
+data <- read.csv("Dropbox/workspace/coursework/act/act_proj/data/data.csv")
 data$intercept <- 1
 
-# set up our data for model building
-include <- c("intercept", close.relationships)
-# include <- c(include, "duke")
-X_data <- as.matrix(data[,include])
-y_data <- data$inculcation_P
+include <- c("intercept", social.position)
+# include <- c("duke", include)
+y_data <- data$inculcation_E
 
-# print(X_data)
+# run this for each script
+X_data <- as.matrix(data[,include])
+
 
 # constants
 kN <- dim(X_data)[1]
@@ -98,16 +98,19 @@ for(s in 1:kBo) {
     Z[s,] <- z
     SIGMA[s] <- s2
     BETA[s,] <- beta_total
-    if (s %% kBurn == 0) { print(s) }
+    # if (s %% kBurn == 0) { print(s) }
 }
 
 beta.mean <- colMeans(BETA)
 z.mean <- colMeans(Z)
 
-results <- data.frame(matrix(nrow=kP, ncol=0))
-results$beta <- beta.mean
-results$inclusion <- z.mean
-rownames(results) <- include
-results <- t(results)
-print(results)
+coef.index <- seq(from = 1, by = 2, length.out = kP)
+prob.index <- seq(from = 2, by = 2, length.out = kP)
+to.print <- rep(NA, 2*kP)
+
+to.print[coef.index] <- beta.mean
+to.print[prob.index] <- z.mean
+to.print <- round(to.print, digits=3)
+cat(to.print, sep="\n")
+
 

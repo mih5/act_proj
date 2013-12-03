@@ -1,4 +1,4 @@
-source("Dropbox/workspace/ACT/rogers/scripts/variables.r")
+source("Dropbox/workspace/coursework/act/act_proj/scripts/variables.r")
 # Reminders for data subsetting
 # demographic: (1) demographic variables
 # social.position: # (2) social position variables
@@ -17,7 +17,7 @@ source("Dropbox/workspace/ACT/rogers/scripts/variables.r")
 # inculcation: each person's inculcation values
 # commonality: each person's commonality values
 
-data <- read.csv("Dropbox/workspace/ACT/rogers/data/data.csv")
+data <- read.csv("Dropbox/workspace/coursework/act/act_proj/data/data.csv")
 n <- nrow(data)
 
 
