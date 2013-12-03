@@ -1,0 +1,11 @@
+measure of enculturation: commonality
+affective dimension: activity
+variable types: close relationships
+school included: no
+
+          intercept     pcis_pos      pcis_pun   pcis_ineff  ecrs_rejanx
+beta      0.8085246 1.825816e-05 -0.0001095715 -0.007280966 0.0001224607
+inclusion 1.0000000 4.825000e-02  0.0617500000  0.707250000 0.0750000000
+           ecrs_intav
+beta      -0.00761236
+inclusion  0.98875000

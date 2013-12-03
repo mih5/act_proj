@@ -1,0 +1,11 @@
+measure of enculturation: inculcation
+affective dimension: activity
+variable types: demographic
+school included: yes
+
+          intercept          age      female      ethnic      cauc       afamer
+beta       1.096237 -0.008997848 0.002970482 0.006515943 0.2391389 -0.006574892
+inclusion  1.000000  0.516250000 0.071000000 0.071500000 0.9875000  0.110000000
+              amerind      hawaii      asian   nonnative     multrace
+beta      0.001468545 -0.01107803 0.07619352 -0.01574648 -0.001345725
+inclusion 0.053250000  0.06800000 0.46450000  0.07525000  0.062750000

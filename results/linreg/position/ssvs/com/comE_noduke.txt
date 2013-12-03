@@ -1,0 +1,11 @@
+measure of enculturation: commonality
+affective dimension: evaluation
+variable types: social position
+school included: no
+
+          intercept     marstat      momeduc      dadeduc       momjob
+beta      0.8073107 -0.01390348 0.0003252099 0.0007295725 3.787801e-05
+inclusion 1.0000000  0.85000000 0.0672500000 0.1122500000 5.400000e-02
+                dadjob       ownhome    ownhome2       ownbus
+beta      7.539237e-05 -0.0003290539 -0.02049421 -0.002401957
+inclusion 5.875000e-02  0.0595000000  0.40725000  0.094750000

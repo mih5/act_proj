@@ -1,0 +1,11 @@
+measure of enculturation: inculcation
+affective dimension: activity
+variable types: network composition
+school included: no
+
+          intercept      marstat    momeduc     dadeduc       momjob
+beta      0.7956701 -0.004302041 0.05067827 0.003288476 0.0003987899
+inclusion 1.0000000  0.199250000 0.95625000 0.164250000 0.0592500000
+                dadjob     ownhome     ownhome2       ownbus
+beta      0.0008157805 0.001776223 0.0003174674 -0.001892175
+inclusion 0.0765000000 0.061500000 0.0550000000  0.062750000

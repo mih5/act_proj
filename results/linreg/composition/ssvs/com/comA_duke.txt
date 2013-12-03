@@ -1,0 +1,11 @@
+measure of enculturation: commonality
+affective dimension: activity
+variable types: network composition
+school included: yes
+
+          intercept     marstat     momeduc     dadeduc       momjob
+beta      0.5479952 -0.01727882 0.002945846 0.004916536 -0.001749128
+inclusion 1.0000000  0.91175000 0.253750000 0.415000000  0.162500000
+                dadjob     ownhome      ownhome2       ownbus      duke
+beta      0.0001200528 -0.00163306 -0.0001106376 -0.001451303 0.1796314
+inclusion 0.0600000000  0.08075000  0.0462500000  0.086250000 1.0000000

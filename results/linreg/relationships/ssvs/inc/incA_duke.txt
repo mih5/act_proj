@@ -1,0 +1,11 @@
+measure of enculturation: inculcation
+affective dimension: activity
+variable types: close relationships
+school included: yes
+
+          intercept    pcis_pos     pcis_pun   pcis_ineff  ecrs_rejanx
+beta      0.8909872 0.000265819 7.478933e-05 -5.21713e-06 0.0003575867
+inclusion 1.0000000 0.059500000 5.800000e-02  5.27500e-02 0.0952500000
+             ecrs_intav      duke
+beta      -0.0002811962 0.2475447
+inclusion  0.0810000000 1.0000000
